@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.graphql-java-kickstart:graphql-java-tools:5.3.5">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.graphql-java-kickstart/graphql-java-tools/5.3.5/fd8062ef4537c41ad65c23236635240ab4f5ddeb/graphql-java-tools-5.3.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.graphql-java-kickstart/graphql-java-tools/5.3.5/50c81a599b0a2a3374f03c618acbfff135a421c8/graphql-java-tools-5.3.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
