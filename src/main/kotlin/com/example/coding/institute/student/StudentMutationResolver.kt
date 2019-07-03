@@ -11,4 +11,7 @@ class StudentMutationResolver(private val studentService: StudentService): Graph
 
     fun modifyStudent(first: String,last: String, email: String, uuid: String): Student =
             studentService.modifyStudent(first, last, email, uuid)
+
+    fun deleteStudent(uuid: String): Boolean =
+            studentService.deleteStudent(uuid)
 }

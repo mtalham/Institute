@@ -4,12 +4,13 @@ schema {
 }
 
 type Query {
-allStudents: [Student!]
+allStudents: [Student!]!
 }
 
 type Mutation {
-createStudent(first: String, last: String, email: String): Student!
+createStudent(first: String!, last: String!, email: String!): Student!
 modifyStudent(first: String!, last: String!, email: String!, uuid: String!): Student!
+deleteStudent(uuid: String!): Boolean!
 }
 
 type Student {

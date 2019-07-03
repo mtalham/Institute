@@ -23,4 +23,10 @@ class StudentService(private val studentRepository: StudentRepository) {
         existingStudent.email = email
         return studentRepository.save(existingStudent)
     }
+
+    fun deleteStudent(uuid: String): Boolean {
+        val student = studentRepository.findByUuid(UUID.fromString(uuid)) ?: throw error("Student does not exist")
+        studentRepository.delete(student)
+        return true
+    }
 }
