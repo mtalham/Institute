@@ -6,11 +6,11 @@ import java.util.*
 
 @Component
 class StudentMutationResolver(private val studentService: StudentService): GraphQLMutationResolver {
-    fun createStudent(first: String, last: String, email: String): Student =
-        studentService.createStudent(first, last, email)
+    fun createStudent(firstName: String, lastName: String, email: String): Student =
+        studentService.createStudent(firstName, lastName, email)
 
-    fun modifyStudent(first: String,last: String, email: String, uuid: String): Student =
-            studentService.modifyStudent(first, last, email, uuid)
+    fun modifyStudent(firstName: String, lastName: String, email: String, uuid: String): Student =
+            studentService.modifyStudent(firstName, lastName, email, uuid)
 
     fun deleteStudent(uuid: String): Boolean =
             studentService.deleteStudent(uuid)

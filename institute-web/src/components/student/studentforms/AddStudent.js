@@ -1,5 +1,5 @@
 import React from "react";
-import { useApollo } from "./StudentApollo";
+import { useApollo } from "../StudentApollo";
 import StudentForm from "./StudentForm";
 
 const AddStudent = ({ history }) => {

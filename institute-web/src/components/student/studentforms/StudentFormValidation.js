@@ -1,10 +1,10 @@
 const validate = values => {
   const errors = {};
-  if (!values.first) {
-    errors.first = "First name is required";
+  if (!values.firstName) {
+    errors.firstName = "First name is required";
   }
-  if (!values.last) {
-    errors.last = "Last name is required";
+  if (!values.lastName) {
+    errors.lastName = "Last name is required";
   }
   if (!values.email) {
     errors.email = "Email is required";

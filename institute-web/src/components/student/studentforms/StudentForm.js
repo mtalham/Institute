@@ -1,6 +1,6 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
-import RenderField from "../utils/RenderField";
+import RenderField from "../../utils/RenderField";
 import validate from "./StudentFormValidation";
 
 const StudentForm = ({ handleSubmit }) => {
@@ -8,7 +8,7 @@ const StudentForm = ({ handleSubmit }) => {
     <form onSubmit={handleSubmit}>
       <div className="form-group">
         <Field
-          name="first"
+          name="firstName"
           component={RenderField}
           type="text"
           label="First Name"
@@ -16,7 +16,7 @@ const StudentForm = ({ handleSubmit }) => {
       </div>
       <div className="form-group">
         <Field
-          name="last"
+          name="lastName"
           component={RenderField}
           type="text"
           label="Last Name"

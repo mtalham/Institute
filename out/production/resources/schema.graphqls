@@ -8,8 +8,8 @@ allStudents: [Student!]!
 }
 
 type Mutation {
-createStudent(first: String!, last: String!, email: String!): Student!
-modifyStudent(first: String!, last: String!, email: String!, uuid: String!): Student!
+createStudent(firstName: String!, lastName: String!, email: String!): Student!
+modifyStudent(firstName: String!, lastName: String!, email: String!, uuid: String!): Student!
 deleteStudent(uuid: String!): Boolean!
 }
 

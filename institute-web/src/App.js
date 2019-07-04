@@ -11,7 +11,7 @@ import { InMemoryCache } from "apollo-cache-inmemory";
 import store from "./Store";
 
 import Student from "./components/student/Student";
-import AddStudent from "./components/student/AddStudent";
+import AddStudent from "./components/student/studentforms/AddStudent";
 import Header from "./components/header/Header";
 import "./App.css";
 

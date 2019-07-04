@@ -14,8 +14,8 @@ export const GET_STUDENTS = gql`
 `;
 
 export const CREATE_STUDENT = gql`
-  mutation CreateStudent($first: String!, $last: String!, $email: String!) {
-    createStudent(first: $first, last: $last, email: $email) {
+  mutation CreateStudent($firstName: String!, $lastName: String!, $email: String!) {
+    createStudent(firstName: $firstName, lastName: $lastName, email: $email) {
       firstName
       lastName
       email
@@ -26,6 +26,21 @@ export const CREATE_STUDENT = gql`
 export const DELETE_STUDENT = gql`
   mutation DeleteStudent($uuid: String!) {
     deleteStudent(uuid: $uuid)
+  }
+`;
+
+export const UPDATE_STUDENT = gql`
+  mutation UpdateStudent(
+    $firstName: String!
+    $lastName: String!
+    $email: String!
+    $uuid: String!
+  ) {
+    modifyStudent(firstName: $firstName, lastName: $lastName, email: $email, uuid: $uuid) {
+      firstName
+      lastName
+      email
+    }
   }
 `;
 
@@ -41,9 +56,11 @@ export const useApollo = () => {
 
   const createStudent = useMutation(CREATE_STUDENT, { refetchQueries });
   const deleteStudent = useMutation(DELETE_STUDENT, { refetchQueries });
+  const updateStudent = useMutation(UPDATE_STUDENT, { refetchQueries });
 
   return {
     createStudent,
-    deleteStudent
+    deleteStudent,
+    updateStudent
   };
 };
